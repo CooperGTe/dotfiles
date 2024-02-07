@@ -1,9 +1,9 @@
-## dotfile
+# dotfile
 
-# Dotfiles config
+## Dotfiles config
 hyprland WM
 
-package list:
+## package list:/n
 -waybar
 -hyprpaper
 -tmux
