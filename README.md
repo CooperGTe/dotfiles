@@ -1,12 +1,20 @@
-# Arch rice Dotfiles
+## Dotfiles
 
-My personal Arch linux config
+#Dotfiles config
 hyprland WM
+
 package list:
+
 waybar
+
 hyprpaper
+
 tmux
+
 nvim
+
 musikcube
+
 cava
+
 ...
