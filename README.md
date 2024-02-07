@@ -3,11 +3,17 @@
 ## Dotfiles config
 hyprland WM
 
-## package list:/n
+## package list:
 -waybar
+
 -hyprpaper
+
 -tmux
+
 -nvim
+
 -musikcube
+
 -cava
+
 ...
