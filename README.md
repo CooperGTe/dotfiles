@@ -1,6 +1,6 @@
 # dotfile
 
-## Dotfiles config
+## dotfiles config for
 hyprland WM
 
 ## package list:
