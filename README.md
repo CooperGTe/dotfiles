@@ -1,20 +1,13 @@
-## Dotfiles
+## dotfile
 
-#Dotfiles config
+# Dotfiles config
 hyprland WM
 
 package list:
-
-waybar
-
-hyprpaper
-
-tmux
-
-nvim
-
-musikcube
-
-cava
-
+-waybar
+-hyprpaper
+-tmux
+-nvim
+-musikcube
+-cava
 ...
