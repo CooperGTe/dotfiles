@@ -16,4 +16,7 @@ hyprland WM
 
 -cava
 
+-cmatrix
+
+-pipe-sh
 ...
