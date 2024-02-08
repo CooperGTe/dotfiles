@@ -4,11 +4,10 @@
 hyprland WM
 
 ## package list:
--waybar
 
--hyprpaper
-
--tmux
+-waybar 
+-hyprpaper 
+-tmux 
 
 -nvim
 
@@ -19,4 +18,8 @@ hyprland WM
 -cmatrix
 
 -pipe-sh
+
+-ttf-jetbrains-mono
+
+-otf-dont-awesome
 ...
