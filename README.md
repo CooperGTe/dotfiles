@@ -6,7 +6,9 @@ hyprland WM
 ## package list:
 
 -waybar 
--hyprpaper 
+
+-hyprpaper
+
 -tmux 
 
 -nvim
