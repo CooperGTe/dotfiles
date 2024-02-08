@@ -1,15 +1,13 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 33,
+    "height": 25,
     "width": 1350,
     "margin": "3, 0, 2, 0",
     // Choose the order of the modules
     "modules-left": ["custom/wmname","sway/workspaces","hyprland/workspaces","sway/mode","cpu","custom/separator","memory","custom/separator","network", "custom/recorder", "custom/audiorec"],
     "modules-center": ["tray","mpd"],
     "modules-right": [
-        "idle_inhibitor",
-        "custom/separator",
         "backlight", 
         "custom/separator",
         "battery",
@@ -88,7 +86,7 @@
         "format-alt": " {:%a,%b %d}" // Icon: calendar-alt
     },
     "cpu": {
-        "format": "&#8239;{usage}%",
+        "format": "&#8239; {usage}%",
         "tooltip": false,
         "on-click": "kitty -e 'htop'"
     },
@@ -110,7 +108,7 @@
         "format-icons": ["", "", ""]
     },
     "backlight": {
-        // "device": "acpi_video1",
+        "device": "eDP-1",
         "format": "{icon}&#8239;{percent}%",
         "format-icons": ["💡", "💡"],
         "on-scroll-down": "brightnessctl -c backlight set 1%-",
@@ -122,7 +120,7 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{icon}&#8239;{capacity}%",
+        "format": "{icon}&#8239; {capacity}%",
         "format-charging": "&#8239;{capacity}%",
         "format-plugged": "&#8239;{capacity}%",
         "format-alt": "{icon} {time}",
@@ -133,7 +131,7 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "&#8239;({signalStrength}%)",
+        "format-wifi": "&#8239; ({signalStrength}%)",
         "format-ethernet": "&#8239;{ifname}: {ipaddr}/{cidr}",
         "format-linked": "&#8239;{ifname} (No IP)",
         "format-disconnected": "✈&#8239;Disconnected",
