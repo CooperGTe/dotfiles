@@ -1,8 +1,8 @@
 # Dotfiles
 
 ## My personal Hyprland Dotfiles (very unfinished)
-
-dependency
+_NOTE: *unusable for everyone except me for now_
+**Dependency**
 - Hyrpland WM
 - Aylur's GTK Shell
 - Waybar (not for long)
@@ -12,5 +12,7 @@ dependency
 - Swaylock
 - Dunst
 - Nvim
-- JetbrainMono Nerd Font
+- MPD
+- Pipewire
+- JetbrainsMono Nerd Font
 - Noto Font CJK
