@@ -4,6 +4,7 @@
 _NOTE: *unusable for everyone except me for now_
 **Dependency**
 - Hyrpland WM
+- SDDM
 - Aylur's GTK Shell
 - Waybar (not for long)
 - SWWW
@@ -12,6 +13,8 @@ _NOTE: *unusable for everyone except me for now_
 - Swaylock
 - Dunst
 - Nvim
+- Thunar
+- FireFox
 - MPD
 - Pipewire
 - JetbrainsMono Nerd Font
