@@ -1,3 +1,3 @@
-# dotfile
+# Dotfiles
 
 ## My personal Hyprland Dotfiles
