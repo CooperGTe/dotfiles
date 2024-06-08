@@ -4,6 +4,7 @@
 ![Desktop Busy](https://github.com/CooperGTe/dotfiles/blob/main/image/compact.png?raw=true)
 ## My personal Hyprland Dotfiles (very unfinished)
 _NOTE: *unusable for everyone except me for now_
+
 **Dependency**
 - Hyrpland WM
 - SDDM
