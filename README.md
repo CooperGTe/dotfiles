@@ -1,5 +1,6 @@
 # Dotfiles
-
+![desktop] (https://github.com/CooperGTe/dotfiles/blob/main/image/desktop.png)
+![desktop busy] (https://github.com/CooperGTe/dotfiles/blob/main/image/compact.png
 ## My personal Hyprland Dotfiles (very unfinished)
 _NOTE: *unusable for everyone except me for now_
 **Dependency**
