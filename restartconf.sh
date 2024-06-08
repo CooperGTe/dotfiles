@@ -8,16 +8,15 @@
 # START UP DEFAULT VARIABLE
 
 decoration="compact" #cozy, compact, glassy
-waybar="snowmachine" #floating, compact
 forcetransparentterminal="false" #true, false
 border="2"
-gapsin="25"
-gapsout="50"
-corner="5"
-blur="false" #true, false
-activeopacity="1"
-inactiveopacity="1"
-tilegap="0"
+gapsin="10"
+gapsout="5"
+corner="0"
+blur="true" #true, false
+activeopacity="0.999"
+inactiveopacity="0.999"
+tilegap="0.5"
 
 # START UP SCRIPT
 
@@ -27,8 +26,8 @@ cp $HOME/Dotfiles/hyprland/hypridle.conf /home/katsuro/.config/hypr/
 #decoration
 cp $HOME/Dotfiles/theme/decoration/"$decoration"/decoration.conf ~/.config/hypr/  
 #waybar
-rm -rf $HOME/.config/waybar/ 
-cp -r $HOME/Dotfiles/theme/waybar/"$waybar"/waybar/ ~/.config/
+#rm -rf $HOME/.config/waybar/ 
+#cp -r $HOME/Dotfiles/theme/waybar/"$waybar"/waybar/ ~/.config/
 #general
 cp $HOME/Dotfiles/theme/general/general.conf ~/.config/hypr/ 
 

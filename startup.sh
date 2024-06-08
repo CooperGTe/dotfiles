@@ -8,16 +8,15 @@
 # START UP DEFAULT VARIABLE
 
 decoration="compact" #cozy, compact, glassy
-waybar="snowmachine" #floating, compact
 forcetransparentterminal="false" #true, false
 border="2"
-gapsin="25"
-gapsout="50"
-corner="5"
-blur="false" #true, false
-activeopacity="1"
-inactiveopacity="1"
-tilegap="0"
+gapsin="5"
+gapsout="10"
+corner="0"
+blur="true" #true, false
+activeopacity="0.999"
+inactiveopacity="0.999"
+tilegap="0.5"
 
 # START UP SCRIPT
 
@@ -27,8 +26,8 @@ cp $HOME/Dotfiles/hyprland/hypridle.conf /home/katsuro/.config/hypr/
 #decoration
 cp $HOME/Dotfiles/theme/decoration/"$decoration"/decoration.conf ~/.config/hypr/  
 #waybar
-rm -rf $HOME/.config/waybar/ 
-cp -r $HOME/Dotfiles/theme/waybar/"$waybar"/waybar/ ~/.config/
+#rm -rf $HOME/.config/waybar/ 
+#cp -r $HOME/Dotfiles/theme/waybar/"$waybar"/waybar/ ~/.config/
 #general
 cp $HOME/Dotfiles/theme/general/general.conf ~/.config/hypr/ 
 
@@ -50,9 +49,9 @@ sed -i "s/rounding = .*/rounding = "$corner"/g" ~/.config/hypr/decoration.conf
 #blur
 sed -i "s/enabled = .*/enabled = "$blur"/g" ~/.config/hypr/decoration.conf
 #activeopacity
-sed -i "s/active_opacity = .*/active_opacity = "$activeopacity"/g" ~/.config/hypr/decoration.conf
+sed -i "/^[[:space:]]*active_opacity[[:space:]]*=/c\  active_opacity = $activeopacity" ~/.config/hypr/decoration.conf
 #inactiveopacity
-sed -i "s/inactive_opacity = .*/inactive_opacity = "$inactiveopacity"/g" ~/.config/hypr/decoration.conf
+sed -i "/^[[:space:]]*inactive_opacity[[:space:]]*=/c\  inactive_opacity = $inactiveopacity" ~/.config/hypr/decoration.conf
 #tilegap
 sed -i '100s/.*/windowrulev2 = opacity '$tilegap', title:^(invis)$/' ~/.config/hypr/hyprland.conf 
 

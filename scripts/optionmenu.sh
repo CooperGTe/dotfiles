@@ -13,15 +13,15 @@ string="       /\         Katsuro@Embodiment of Computer
 > "
 stringw="       /\         Katsuro@Em│   Wallpaper
       /  \        ┌──┐QUICK │─────────────────────
-     /\   \        1.│ Theme│1. Deso's Pizza
-    /      \       2.│ Chang│2. Plain Black
-   /   ,,   \      3.│ Reloa│3. Green And Blue
+     /\   \        1.│ Theme│1. Plain Black
+    /      \       2.│ Chang│2. Deso's Pizza
+   /   ,,   \      3.│ Reloa│3. EVA-01
   /   |  |  -\     4.│ Swayi│4. Cozy
  /_-''    ''-_\    5.│ Power│5. Snow Mountain
-                  └──┴──────│6. Sunflower Field
-                            │7. Mech
+                  └──┴──────│6. Anime Girl
+                            │7. Maiden
                             │8. Mountain
-                            │9. Ruinworld 
+                            │9. Terra
 "
 stringwm="================
 1.FULL
@@ -71,48 +71,23 @@ case $input1 in
       printf "${stringw}"
       read -s -n 1 inputw
       case "$inputw" in
-        1) swww img $HOME/Dotfiles/wallpaper/pizzacyberpunk2k.gif
+        1) swww img $HOME/Dotfiles/wallpaper/black.png
         ;;
-        2) swww img $HOME/Dotfiles/wallpaper/black.png
+        2) swww img $HOME/Dotfiles/wallpaper/pizzacyberpunk2k.gif
         ;;
-        3) swww img $HOME/Dotfiles/wallpaper/greenlandscape.jpg
+        3) swww img $HOME/Dotfiles/wallpaper/evangelion.png
         ;;
         4) swww img $HOME/Dotfiles/wallpaper/cozy.jpg
         ;;
         5) swww img $HOME/Dotfiles/wallpaper/snowmachine.jpg
         ;;
-        6) swww img $HOME/Dotfiles/wallpaper/sunflower.png
+        6) swww img $HOME/Dotfiles/wallpaper/anime-girl.jpg
         ;;
-        7)
-          clear
-          printf "${stringwm}"
-          read -s -n 1 inputwm
-          case "$inputwm" in
-            1) swww img ~/Dotfiles/wallpaper/mech/'Obliterator.png'
-            ;;
-            2) swww img ~/Dotfiles/wallpaper/mech/'Obliterator(100).png'
-            ;;
-            3) swww img ~/Dotfiles/wallpaper/mech/'Obliterator(010).png'
-            ;;
-            4) swww img ~/Dotfiles/wallpaper/mech/'Obliterator(001).png'
-            ;;
-            5) swww img ~/Dotfiles/wallpaper/mech/'Obliterator(011).png'
-            ;;
-            6) swww img ~/Dotfiles/wallpaper/mech/'Obliterator(101).png'
-            ;;
-            7) swww img ~/Dotfiles/wallpaper/mech/'Obliterator(110).png'
-            ;;
-            8) swww img ~/Dotfiles/wallpaper/mech/'Obliterator(000).png'
-            ;;
-            *) 
-            ;;
-          esac
-          
-          swww img $HOME/Dotfiles/wallpaper/Obliterator.png
+        7) swww img $HOME/Dotfiles/wallpaper/garden.png
         ;;
         8) swww img $HOME/Dotfiles/wallpaper/Mountain.jpg
         ;;
-        9) swww img $HOME/Dotfiles/wallpaper/Ruinworld.jpg
+        9) swww img $HOME/Dotfiles/wallpaper/terra.jpg
         ;;
         *) break
       ;;

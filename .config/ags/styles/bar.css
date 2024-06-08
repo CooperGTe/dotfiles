@@ -1,0 +1,121 @@
+* {
+  font-family: Serif Sans Font;
+  font-weight: bold;
+  font-size: 10px;
+  color: @theme_fg_color;
+}
+button {
+  min-width: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-radius: 0px;
+  background-color: @header;
+}
+button:active {
+  background-color: @theme_selected_bg_color;
+}
+
+
+
+window.bar .top {
+  background-color: @theme_bg_color;
+  color: @theme_fg_color;
+  padding: 0px 2px;
+  border-radius: 0px;
+}
+window.bar .center {
+  background-color: @theme_bg_color;
+  color: @theme_fg_color;
+  padding-right: 5px;
+  border-radius: 0px;
+  background: linear-gradient(315deg, transparent 10px, @theme_bg_color 0);
+  margin-bottom: 10px;
+  padding-top: 30px;
+}
+window.bar .bottom {
+  background-color: @theme_bg_color;
+  color: @theme_fg_color;
+  padding: 12px 0px;
+  border-radius: 0px;
+  background: linear-gradient(225deg, transparent 10px, @theme_bg_color 0);
+}
+
+
+
+.icon-box {
+  margin-left: -2px;
+}
+.icon {
+  font-size: 20px;
+  padding-right: 3px;
+  margin: -3px;
+}
+
+
+
+.brightness {
+  background-color: @theme_bg_color;
+  border-radius: 10px 0px 0px 10px;
+}
+.volume {
+  background-color: @theme_bg_color;
+  border-radius: 0px 10px 10px 0px;
+  padding: 0px 1px;
+}
+
+
+
+.workspaces {
+  background-color: @theme_bg_color;
+  color: @theme_fg_color;
+}
+.workspaces button {
+  border-radius: 0px;
+  border-left: 3px solid @theme_bg_color;
+}
+.workspaces button.focused {
+  border-left: 3px solid @theme_selected_bg_color;
+}
+
+
+
+.clock-box {
+  background-color: @header;
+  border-radius: 5px;
+}
+.clock {
+  font-weight: lighter;
+  font-size: 15px;
+}
+
+
+
+.battery {
+  margin-right: -5px;
+}
+
+
+
+.ram {
+  min-width: 30px;
+  min-height: 30px;
+  font-size: 6px;
+  margin: 4px;
+  background-color:  @header;
+  color: @red;
+}
+.cpu {
+  min-width: 30px;
+  min-height: 30px;
+  font-size: 6px;
+  margin: 4px;
+  background-color:  @header;
+  color: @blue;
+}
+
+
+
+.tray {
+  background-color: @transparent;
+}
+

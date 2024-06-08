@@ -1,0 +1,115 @@
+.profile {
+  background-color: @theme_bg_color;
+  padding: 8px;
+  color: @theme_fg_color;
+  border-radius: 0px;
+  background: linear-gradient(315deg, transparent 10px, @theme_bg_color 0);
+}
+.profile-id {
+  background: linear-gradient(315deg, transparent 10px, @header 0);
+  padding: 3px;
+  padding-right: 18px;
+}
+
+.control {
+  background-color: @theme_bg_color;
+  border-radius: 0px;
+  margin-right: 14px;
+  padding: 0px 10px;
+}
+.pslider highlight {
+  border-radius: 5px;
+}
+.pslider {
+  padding: 10px 10px;
+  margin-bottom: .3em;
+}
+.pslider trough {
+  min-height: 8px;
+  border-radius: 5px;
+}
+
+
+.data {
+  background-color: @theme_bg_color;
+}
+.panel-ram-box {
+  background-color: @header;
+  border-radius: 5px;
+  margin: 0px 5px 5px 5px;
+}
+.panel-cpu-box {
+  background-color: @header;
+  border-radius: 5px;
+  margin: 0px 5px 0px 5px;
+}
+
+.panel-ram {
+  min-width: 40px;
+  min-height: 40px;
+  font-size: 8px;
+  margin: 4px;
+  color: @red;
+  background-color: @theme_bg_color;
+}
+.panel-cpu {
+  min-width: 40px;
+  min-height: 40px;
+  font-size: 8px;
+  margin: 4px;
+  color: @blue;
+  background-color: @theme_bg_color;
+}
+
+.datalabel {
+  margin-left: 3px;
+  color: @theme_fg_color;
+}
+.ramlabel {
+  color: @theme_fg_color;
+  margin-bottom: 30px;
+  color: @red;
+}
+.cpulabel {
+  color: @theme_fg_color;
+  color: @blue;
+}
+.pbattery {
+  padding: 8px;
+  color: @theme_fg_color;
+}
+.pbattery trough{
+  border-radius: 5px;
+}
+.pbattery block{
+  border-radius: 5px;
+}
+.acpi {
+  color: @theme_fg_color;
+}
+.datemenu {
+  background-color: @theme_bg_color;
+  margin-right: 6px; 
+}
+.pclocka {
+  font-size: 40px;
+  color: @theme_fg_color;
+}
+.pclockb {
+  font-size: 12px;
+  margin-bottom: 9px;
+  color: @theme_fg_color;
+}
+.datemenu calendar{
+  padding: 2px;
+}
+
+.profilepicture {
+  background-image: url('/home/katsuro/Dotfiles/profile/profile.png'); 
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-width: 100px; 
+  min-height: 100px;
+}
+
+
