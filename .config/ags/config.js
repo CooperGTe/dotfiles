@@ -5,7 +5,6 @@ import { TopPanel } from "./widget/controlpanel.js"
 import { CenterPanel } from "./widget/controlpanel.js"
 import { BottomPanel } from "./widget/controlpanel.js"
 import { DesktopWidget } from "./widget/desktopwidget.js"
-import { LifeSupport } from "./widget/lifesupport.js"
 import { Media } from "./widget/media.js"
 import { NotificationPopups } from "./widget/notificationPopups.js"
 
