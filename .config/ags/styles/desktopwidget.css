@@ -2,3 +2,33 @@
   margin-bottom: 0px;
 }
 
+.border-right {
+  border-right: 3px solid #ffffff; 
+  padding: 10px;
+}
+.hour {
+  font-size: 80px; 
+  font-weight: normal; 
+  margin: -20px 0px;
+}
+.minute {
+  font-size: 80px; 
+  font-weight: normal;
+  margin: -20px 0px;
+}
+.day {
+  font-size: 100px;
+  font-weight: normal;
+  padding-left: 50px;
+  margin-bottom: -20px;
+}
+.month {
+  font-size: 20px;
+  font-weight: normal;
+  padding-right: 20px;
+  margin-left: 5px;
+}
+.fulldate {
+  font-size: 20px; 
+  font-weight: normal;
+}

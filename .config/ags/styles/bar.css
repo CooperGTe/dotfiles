@@ -119,3 +119,17 @@ window.bar .bottom {
   background-color: @transparent;
 }
 
+
+
+.button1 {
+  border-radius: 5px;
+  margin: 3px;
+} 
+.button2 {
+  border-radius: 5px;
+  margin: 3px;
+}
+.button3 {
+  border-radius: 5px;
+  margin: 3px;
+}

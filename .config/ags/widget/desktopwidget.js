@@ -16,44 +16,38 @@ const fulldate = Variable("", {
 
 
 export function DesktopWidget() {
-  const clock = Widget.Box({
-    vertical: true,
-    css: "border-right: 3px solid #ffffff; padding: 10px;",
-    children: [
+  const clock = Widget.Box(
+    {
+      vertical: true,
+      class_name: "border-right",
+    },
+    Widget.Label ({
+      label: hour.bind(),
+      class_name: "hour",
+    }),
+    Widget.Label ({
+      label: minute.bind(),
+      class_name: "minute",
+    }),
+  )
+  const days = Widget.Box ({vertical: true},
+    Widget.Label ({
+      label: day.bind(),
+      class_name: "day",
+    }),
+    Widget.Box ({css: "padding-left: 50px;"},
       Widget.Label ({
-        label: hour.bind(),
-        css: "font-size: 80px; font-weight: normal; margin: -20px 0px",
+        label: month.bind(),
+        class_name: "month",
       }),
       Widget.Label ({
-        label: minute.bind(),
-        css: "font-size: 80px; font-weight: normal; margin: -20px 0px",
-      }),
-    ]
-  })
-  const days = Widget.Box ({
-    vertical: true,
-    children: [
-      Widget.Label ({
-        label: day.bind(),
-        css: "font-size: 100px; font-weight: normal; padding-left: 50px; margin-bottom: -20px",
-      }),
-      Widget.Box ({
-        css: "padding-left: 50px;",
-        children: [
-          Widget.Label ({
-            label: month.bind(),
-            css: "font-size: 20px; font-weight: normal; padding-right: 20px; margin-left: 5px;",
-          }),
-          Widget.Label ({
-            label: fulldate.bind(),
-            css: "font-size: 20px; font-weight: normal;",
-          }),
-        ]
+        label: fulldate.bind(),
+        class_name: "fulldate",
       })
-    ]
-  })
-  return Widget.Box ({
-    class_name: "desktopwidget",
-    children: [clock, days]
-  })
+    )
+  )
+  return Widget.Box ({class_name: "desktopwidget"},
+    clock, 
+    days
+  )
 }

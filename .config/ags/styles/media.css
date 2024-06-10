@@ -1,15 +1,15 @@
 .player {
-  padding: 10px;
-  min-width: 100px;
+  padding: 5px 15px 5px 5px;
+  min-width: 300px;
   border-radius: 0px;
   background-color: @theme_bg_color;
   color: @theme_fg_color;
-  background: linear-gradient(255deg, transparent 10px, @theme_bg_color 0);
+  background: linear-gradient(225deg, transparent 10px, @theme_bg_color 0);
 }
 
 .player .img {
-    min-width: 100px;
-    min-height: 100px;
+    min-width: 50px;
+    min-height: 50px;
     background-size: cover;
     background-position: center;
     border-radius: 13px;
@@ -18,10 +18,12 @@
 
 .player .title {
     font-size: 1.2em;
+    padding-right: 1em;
 }
 
 .player .artist {
     font-size: 1.1em;
+    padding-right: 1em;
     color: @insensitive_fg_color;
 }
 
@@ -46,6 +48,7 @@
     min-height: 1em;
     min-width: 1em;
     padding: .3em;
+    border-radius: 5px
 }
 
 .player button.play-pause {

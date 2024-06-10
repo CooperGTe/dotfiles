@@ -2,7 +2,6 @@ import { Profile } from './controlpanel/profile.js'
 import { Control } from './controlpanel/control.js'
 import { Data } from './controlpanel/data.js'
 import { DateMenu } from './controlpanel/datemenu.js'
-import { Media } from './controlpanel/media.js'
 
 export function TopPanel() {
   return Widget.Box({
@@ -32,9 +31,6 @@ export function BottomPanel() {
     vpack: "end",
     spacing: 8,
     children: [
-      Media(),
-      //Fetch(),
-      //Settings(),
     ]
   })
 }

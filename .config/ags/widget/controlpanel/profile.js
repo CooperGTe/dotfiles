@@ -9,63 +9,24 @@ export function Profile() {
   const ProfilePicture = Widget.Box({
     class_name: "profilepicture",
   }) 
-  function ProfileID() {
-    function User() {   
-      const Userdt = Widget.Label({
-        label: user.bind(),
-        halign: 'start',
-      })
-      const Userlb = Widget.Label({
-        label: "User : ",
-        halign: 'start',
-      })
-      return Widget.Box ({
-        children: [Userlb, Userdt]
-      })
-    }
-    function Host() {
-      const Hostdt = Widget.Label({
-        label: host.bind(),
-        halign: 'start',
-      })
-      const Hostlb = Widget.Label({
-        label: "Host : ",
-        halign: 'start',
-      })
-      return Widget.Box ({
-        children: [Hostlb, Hostdt]
-      })
-    }
-    function OS() {
-      const OSdt = Widget.Label({
-        label: os.bind(),
-        halign: 'start',
-      })
-      const OSlb = Widget.Label({
-        label: "OS    : ",
-        halign: 'start',
-      })
-      return Widget.Box ({
-        children: [OSlb, OSdt]
-      })
-    }
-    return Widget.Box({
-      class_name: "profile-id",
-      spacing: 0,
-      vertical: true,
-      children: [
-        User(),
-        Host(),
-        OS(),
-      ]
-    })
-  }
-  return Widget.Box({
-    class_name: "profile",
-    spacing: 8,
-    children: [
-      ProfilePicture,
-      ProfileID(),
-    ]
-  })
-}
+  const User = Widget.Box([
+    Widget.Label ({label: 'User : ',halign: 'start',}),
+    Widget.Label ({label: user.bind(),halign: 'start',})
+  ]) 
+  const Host = Widget.Box([
+    Widget.Label ({label: 'Host : ',halign: 'start',}),
+    Widget.Label ({label: host.bind(),halign: 'start',})
+  ])
+  const OS = Widget.Box([
+    Widget.Label ({label: "OS    : ",halign: 'start'}),
+    Widget.Label ({label: os.bind(),halign: 'start'})
+  ])
+  return Widget.Box({class_name: "profile"},
+    ProfilePicture,
+    Widget.Box ({vertical: true,class_name: "profile-id"},
+      User,
+      Host,
+      OS,
+    )
+  )
+} 

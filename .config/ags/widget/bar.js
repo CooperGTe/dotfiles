@@ -134,7 +134,26 @@ function ClientTitle() {
     xalign: 0,
     maxWidthChars: 45,
     wrap: true,
-    useMarkup: true,
+    useMarkup: true,const myVar = Variable('initial-value', {
+    // listen is what will be passed to Utils.subprocess, so either a string or string[]
+    listen: App.configDir + '/script.sh',
+    listen: 'bash -c "some-command"',
+    listen: ['bash', '-c', 'some-command'],
+
+    // can also take a transform function
+    listen: [App.configDir + '/script.sh', out => JSON.parse(out)],
+    listen: [['bash', '-c', 'some-command'], out => JSON.parse(out)],
+
+    // poll is a [interval: number, cmd: string[] | string, transform: (string) => any]
+    // cmd is what gets passed to Utils.execAsync
+    poll: [1000, 'some-command'],
+    poll: [1000, 'some-command', out => 'transformed output: ' + out],
+    poll: [1000, ['bash', '-c', 'some-command'], out => 'transformed output: ' + out],
+
+    // or [number, function]
+    poll: [1000, () => { return new Date(); }],
+    poll: [1000, Math.random],
+});
   })
 }
 
@@ -271,6 +290,8 @@ function SysTray() {
   })
 }
 
+
+
 function Button1() {
   return Widget.Button({
     class_name: "button1",
@@ -282,19 +303,20 @@ function Button2() {
     class_name: "button2",
     label: "O",
     on_clicked: () => {
-        Utils.execAsync(['bash', '-c', 'ags --toggle-window desktopwidget-0'])
-      }
+      Utils.execAsync(['bash', '-c', 'ags --toggle-window desktopwidget-0'])
+    }
   })
 }
 function Button3() {
   return Widget.Button({
     class_name: "button3",
     label: "O",
+    on_clicked: () => {
+      Utils.execAsync(['bash', '-c', 'ags --toggle-window mediawin-0'])
+    }
   })
 }
 
-
-// layout of the bar
 export function TopBar() {
   return Widget.Box(
     {
@@ -307,8 +329,6 @@ export function TopBar() {
         Volume(),
         Workspaces(),
         Clock(),
-        //Arrow(),
-        //ClientTitle(),
       ],
     } 
   )
@@ -321,7 +341,6 @@ export function CenterBar() {
       spacing: 8,
       vertical: true,
       children: [
-        //Media(),
         BatteryLabel(),
         RAM(),
         CPU(),
