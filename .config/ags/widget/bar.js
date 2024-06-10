@@ -134,26 +134,7 @@ function ClientTitle() {
     xalign: 0,
     maxWidthChars: 45,
     wrap: true,
-    useMarkup: true,const myVar = Variable('initial-value', {
-    // listen is what will be passed to Utils.subprocess, so either a string or string[]
-    listen: App.configDir + '/script.sh',
-    listen: 'bash -c "some-command"',
-    listen: ['bash', '-c', 'some-command'],
-
-    // can also take a transform function
-    listen: [App.configDir + '/script.sh', out => JSON.parse(out)],
-    listen: [['bash', '-c', 'some-command'], out => JSON.parse(out)],
-
-    // poll is a [interval: number, cmd: string[] | string, transform: (string) => any]
-    // cmd is what gets passed to Utils.execAsync
-    poll: [1000, 'some-command'],
-    poll: [1000, 'some-command', out => 'transformed output: ' + out],
-    poll: [1000, ['bash', '-c', 'some-command'], out => 'transformed output: ' + out],
-
-    // or [number, function]
-    poll: [1000, () => { return new Date(); }],
-    poll: [1000, Math.random],
-});
+    useMarkup: true,
   })
 }
 
