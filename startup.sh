@@ -12,7 +12,7 @@ forcetransparentterminal="false" #true, false
 border="2"
 gapsin="5"
 gapsout="10"
-corner="0"
+corner="10"
 blur="true" #true, false
 activeopacity="0.999"
 inactiveopacity="0.999"
@@ -23,6 +23,7 @@ tilegap="0.5"
 #hyprland
 cp $HOME/Dotfiles/hyprland/hyprland.conf /home/katsuro/.config/hypr/
 cp $HOME/Dotfiles/hyprland/hypridle.conf /home/katsuro/.config/hypr/
+cp $HOME/Dotfiles/hyprland/hyprpaper.conf /home/katsuro/.config/hypr/
 #decoration
 cp $HOME/Dotfiles/theme/decoration/"$decoration"/decoration.conf ~/.config/hypr/  
 #waybar

@@ -18,10 +18,10 @@ stringw="       /\         Katsuro@Em│   Wallpaper
    /   ,,   \      3.│ Reloa│3. EVA-01
   /   |  |  -\     4.│ Swayi│4. Cozy
  /_-''    ''-_\    5.│ Power│5. Snow Mountain
-                  └──┴──────│6. Anime Girl
+                  └──┴──────│6. JapanPixAnimated
                             │7. Maiden
                             │8. Mountain
-                            │9. Terra
+                            │9. Simpleton
 "
 stringwm="================
 1.FULL
@@ -81,13 +81,13 @@ case $input1 in
         ;;
         5) swww img $HOME/Dotfiles/wallpaper/snowmachine.jpg
         ;;
-        6) swww img $HOME/Dotfiles/wallpaper/anime-girl.jpg
+        6) swww img $HOME/Dotfiles/wallpaper/jpcitypixart.gif
         ;;
         7) swww img $HOME/Dotfiles/wallpaper/garden.png
         ;;
-        8) swww img $HOME/Dotfiles/wallpaper/Mountain.jpg
+        8) swww img $HOME/Dotfiles/wallpaper/mountain.png
         ;;
-        9) swww img $HOME/Dotfiles/wallpaper/terra.jpg
+        9) swww img $HOME/Dotfiles/wallpaper/smooth-art.jpg
         ;;
         *) break
       ;;
