@@ -1,5 +1,13 @@
+export LANG=en_US.UTF-8
+
+export EDITOR=nvim
+export VISUAL="$EDITOR"
+
 NEWLINE=$'\n'
-PROMPT="${NEWLINE}%B%F{black}%K{blue}%n%F{blue}%K{#444444}%F{#444444}%K{#262626}%F{bright_white}%m%F{#262626}%K{red}%F{black}%~%F{red}%K{#00000000} %b%F{bright_white}"
+#PROMPT="%K{#ff0000} %n %~ %K{#00000000} >"
+PROMPT="$NEWLINE┌ %F{#89B4FA}%F{bright_white}%K{#89B4FA}%n%F{#89B4FA}%K{#00000000} %F{#303030}%F{bright_white}%K{#303030}%m%F{#303030}%K{#202020} %F{bright_white}%~ %F{#202020}%K{#00000000}%F{bright_white}$NEWLINE└ > "
+#PROMPT="$NEWLINE %F{#444444}%/%F{#ffffff}% $NEWLINE > "
+#PROMPT="${NEWLINE}%B%F{black}%K{blue}%n%F{blue}%K{#444444}%F{#444444}%K{#262626}%F{bright_white}%m%F{#262626}%K{red}%F{black}%~%F{red}%K{#00000000} %b%F{bright_white}"
 # The following lines were added by compinstall
 
 zstyle ':completion:*' completer _expand _complete _ignored
@@ -10,8 +18,8 @@ compinit
 # End of lines added by compinstall
 
 export HISTFILE=~/.zsh_history
-export HISTSIZE=10000
-export SAVEHIST=50000
+export HISTSIZE=100000
+export SAVEHIST=500000
 
 # HISTORY
 setopt EXTENDED_HISTORY          # Write the history file in the ':start:elapsed;command' format.
@@ -29,20 +37,48 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 
+
+# Declare the variable
+typeset -A ZSH_HIGHLIGHT_STYLES
+
+ZSH_HIGHLIGHT_STYLES[command]='fg=#afDfff'
+ZSH_HIGHLIGHT_STYLES[builtin]='fg=#AAFFFF'
+ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=#ffbfbf'
+
+# To have paths colored instead of underlined
+ZSH_HIGHLIGHT_STYLES[path]='fg=cyan'
+
+
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#4a4a4a,underline"
+
+
+bindkey '^[[1;5A' history-substring-search-up
+bindkey '^[[1;5B' history-substring-search-down
+
+
+# ALIASES
 export PF_COL3=6
 export PF_COL3=6
-pfetch
+export SWWW_TRANSITION_POS=0.99,0.985
+export SWWW_TRANSITION=grow
+export SWWW_TRANSITION_STEP=50
+export SWWW_TRANSITION_FPS=255
+export SWWW_TRANSITION_DURATION=1
 #aliases
-alias skt='dunstify -h string:x-canonical-private-synchronous:katsuro -i ~/Dotfiles/profile/Katsuro_20240423174756.png katsuro'
-alias ask='$HOME/Dotfiles/scripts/skt.sh'
 alias brightness='brightnessctl -c backlight set'
-alias volume='pactl set-sink-volume @DEFAULT_SINK@'
-alias ls='ls --color=auto'
+alias volume='pactl set-s`ink-volume @DEFAULT_SINK@'
+
+alias ls='ls --color=auto -a'
 alias grep='grep --color=auto'
+
 alias nmcliscan='nmcli device wifi list'
 alias nmcliconnect='nmcli device wifi connect'
+
 alias htm='$HOME/Dotfiles/scripts/thememanager.sh'
 alias type='function _cats() { $HOME/Dotfiles/scripts/type.sh "$1"; }; _cats'
-alias katsuro='sudo'
 alias pls='sudo'
+alias nmrestart='sudo systemctl restart NetworkManager'
+alias btrestart='sudo systemctl restart bluetooth'
+alias yt-audio='yt-dlp -x --audio-format mp3 --audio-quality 0'
+alias dramc='echo 3 | pkexec tee /proc/sys/wm/drop_caches'
 
